@@ -1,0 +1,35 @@
+<!-- templates/quiz.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FlashQuiz - Take Quiz</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1 class="section-title">📝 Quiz Time!</h1>
+    <form action="{{ url_for('submit') }}" method="POST" class="quiz-form">
+      {% for q in questions %}
+        <div class="question-card">
+          <h3>Q{{ loop.index }}. {{ q[1] }}</h3>
+          <div class="options">
+            {% for i in range(2, 6) %}
+              <label>
+                <input type="radio" name="{{ q[0] }}" value="{{ i-1 }}" required>
+                {{ q[i] }}
+              </label><br>
+            {% endfor %}
+          </div>
+        </div>
+      {% endfor %}
+      <div class="center">
+        <button type="submit" class="btn submit-btn">Submit Quiz</button>
+      </div>
+    </form>
+  </div>
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

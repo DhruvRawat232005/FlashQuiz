@@ -1,0 +1,159 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #f6f9fc, #dbe9f4);
+  color: #2e2e2e;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+/* Container */
+.container {
+  max-width: 800px;
+  width: 100%;
+  background: #ffffffdd;
+  padding: 40px 30px;
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+}
+
+/* Center Alignment */
+.center {
+  text-align: center;
+}
+
+/* Logo */
+.logo-text {
+  font-size: 48px;
+  font-weight: 700;
+  color: #444;
+  margin-bottom: 10px;
+}
+
+.tagline {
+  font-size: 18px;
+  color: #777;
+  margin-bottom: 30px;
+}
+
+/* Section Title */
+.section-title {
+  font-size: 32px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+/* Buttons */
+.btn {
+  padding: 12px 25px;
+  border: none;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.start-btn {
+  background-color: #0077ff;
+  color: white;
+}
+
+.submit-btn {
+  background-color: #28c76f;
+  color: white;
+  margin-top: 20px;
+}
+
+.retake-btn {
+  background-color: #ff9f43;
+  color: white;
+  margin-right: 10px;
+}
+
+.home-btn {
+  background-color: #7367f0;
+  color: white;
+  margin-top: 10px;
+}
+
+.btn:hover {
+  opacity: 0.9;
+  transform: scale(1.05);
+}
+
+/* Question Cards */
+.question-card {
+  background-color: #f8f9fa;
+  border-left: 6px solid #0077ff;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 25px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
+}
+
+.question-card h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.options label {
+  font-size: 16px;
+  display: block;
+  margin: 6px 0;
+  cursor: pointer;
+}
+
+.options input[type="radio"] {
+  margin-right: 10px;
+}
+
+/* Result Box */
+.score-box {
+  font-size: 22px;
+  color: #111;
+  margin: 20px 0;
+  background-color: #e3f8e2;
+  padding: 15px 25px;
+  border-radius: 10px;
+  display: inline-block;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .container {
+    padding: 25px 15px;
+  }
+
+  .section-title {
+    font-size: 26px;
+  }
+
+  .logo-text {
+    font-size: 36px;
+  }
+
+  .score-box {
+    font-size: 18px;
+  }
+}
+
+.options label.selected {
+  background-color: #e0f0ff;
+  border-radius: 6px;
+  padding: 4px 8px;
+  transition: 0.2s ease;
+}

@@ -1,0 +1,26 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Welcome to FlashQuiz</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container center">
+    <h1 class="logo-text">⚡ FlashQuiz</h1>
+    <p class="tagline">Test your brain with a quick quiz!</p>
+    <form action="{{ url_for('quiz') }}" method="get">
+  <select name="subject" class="dropdown">
+    <option value="">-- Select Subject --</option>
+    <option value="Math">Math</option>
+    <option value="Science">Science</option>
+    <option value="History">History</option>
+  </select>
+  <button type="submit" class="btn start-btn">Start Quiz</button>
+</form>
+  </div>
+</body>
+</html>
